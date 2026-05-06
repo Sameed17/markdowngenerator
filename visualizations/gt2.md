@@ -1,0 +1,8 @@
+
+e can read the threshold temperature \(T_{\text{th}}\) versus different \(J_{2}\) from the curve in the \(J_{2}-T\) plane. When \(J_{2}\) increases, \(T_{\text{th}}\) decreases, and when \(J_{2}\) crosses about \(0.3758\), \({\cal N}_{1/2,1}\) will disappear at any temperature.
+
+Next, we consider the entanglement between NNN spins. In Fig. 7, we plot the negativity \({\cal N}_{1/2,1/2}\) as a function of the temperature and \(J_{2}\). We can see that, before \(J_{2}\) reaches the value about \(J_{2}=0.5\), \({\cal N}_{1/2,1/2}\) keeps being zero at any temperature. And in the region \(J_{2}>0.5\), the \({\cal N}_{1/2,1/2}\) can be enhanced by the increasing NNN interaction. This is a result from the competition of two kinds of exchange interactions. The thermal fluctuation all along suppresses the entanglement. So, from the curve lying on the \(J_{2}-T\) plane which corresponds to the boundary of the nonzero and zero values of \({\cal N}_{1/2,1/2}\), we may find that the higher the temperature is, the larger the threshold \(J_{\text{2th}}\) will be. From another point of view, the \(T_{\text{th}}\) increases as \(J_{2}\) increases.
+
+
+
+In Fig. 8, we plot the negativity \({\cal N}_{1,1}\) versus \(T\) and \(J_{2}\). In the region of \(J_{2}<0.25\), \({\cal N}_{1,1}\) is zero at any temperature. When \(J_{2}>0.25\), the increasing NNN exchange interaction \(J_{2}\) enhances the negativity and exhibits two particular flat roofs. With the temperature rises, \({\cal N}_{1,1}\) is s

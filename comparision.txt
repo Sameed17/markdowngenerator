@@ -1,0 +1,143 @@
+===== TRAIN SAMPLES =====
+
+
+====================================================================================================
+📌 GROUND TRUTH:
+
+ground state is two-fold degenerate, and when \(B>B_{\text{th}}\) the ground state becomes non-degenerate and the corresponding wave function is given by
+
+\[|\psi_{0}\rangle=|-\frac{1}{2},-1\rangle,\] (39)
+
+which is obviously of no entanglement. Then, the ground-state negativity forms a platform when \(0<B<B_{\text{th}}\). The jump of negativity at \(B=B_{\text{th}}\) is due to the level crossing. For \(N>2\), the effects of magnetic fields on entanglement can be also explained by level crossing. For instance, for \(N=4\), there are two level crossing, and the entanglement displays two jumps.
+
+## III Effects of next-nearest-neighbor interactions on entanglement
+
+We have studied the effects of finite temperature and magnetic fields on entanglement, and now consider the model containing two kinds of spins, spin \(\frac{1}{2}\) and \(1\), alternating on a ring with antiferromagnetic exchange coupling between both the NN spins and the NNN spins. The Hamiltonian can be expressed as
+
+\[H=J_{1}\sum^{N/2}_{i=1}\big{(}{\bf s}_{i}\cdot{\bf S}_{i}+{\bf S}_{i}\cdot{\bf s }_{i+1}\big{)}+J_{2}\sum^{N/2}_{i=1}\big{(}{\bf s}_{i}\cdot{\bf s}_{i+1}+{\bf S }_{i}\cdot{\bf S}_{i+1}\big{)},\] (40)
+
+where the \({\bf s}_{i}\) and \({\bf S}_{i}\) are spin-1/2 and spin-1 operators in the \(i\)th cell. \(J_{1}\) characterizes the NN exchange coupling and \(J_{2}\) the NNN coupling. We consider the antiferromagnetic interaction by taking \(J_{1},J_{2}>0\). \(N\) is the total number of spins and here we 
+
+----------------------------------------------------------------------------------------------------
+🤖 ZERO-SHOT OUTPUT:
+
+system
+You are a helpful assistant.
+user
+Convert this document image into structured Markdown.
+assistant
+ground state is two-fold degenerate, and when \(B > B_{0}\) the ground state becomes non-degenerate and the corre- spending wave function is given by \(\left|\psi _ {0}\right| =\left[1-\frac{1}{2}, 1\right]\). (39) which is obviously of no entanglement. Then, the ground- state negativity forms a plateau when \(B<B_{0}\). The jump of negativity at \(B=B_{0}\) is due to the level crossing. For \(N=2\), the eects of magnetic fields on entanglement are studied by level crossing. For instance, for \(N=4\), there are two level crossing, and the entanglement displays two jumps. III. EFFECTS OF NEXT-NEAREST-NEIGHBOR INTERACTIONS ON ENTANGLEMENT We have studied the eects of einite temperature and magnetic fields on entanglement, and now consider the model containing two kinds of spins, spin 4 and 1, alter- nating on a ring with antiferromagnetic exchange cou- pling between both the NN spins and the NN Hamiltonians. The Hamiltonian can be expressed as \(H=J_{1} \sum _ {i=1}^{N}(\mathbf {s } _ {i} \cdot \mathbf {s } _ {i+1}+\mathbf {s } _ {i+1} \cdot \mathbf {s } _ {i+1})+\frac {N^{2}}{2}J_{2} \sum _ {i=1}^{N}(\mathbf {s } _ {i+1} \cdot \mathbf {s } _ {i+1}+\mathbf {s } _ {i+1} \cdot \mathbf {s } _ {i+1})\), (40) where the \(\mathbf {s } _ {i}\) and \(\mathbf {s } _ {i}\) are spin 1/2 and spin 1 operators in the rth cell. The Hamiltonian characterizes the NN exchange coupling and the
+
+----------------------------------------------------------------------------------------------------
+🚀 FINE-TUNED OUTPUT:
+
+system
+You are a helpful assistant.
+user
+Convert this document image into structured Markdown.
+assistant
+\begin{align*}
+ground state is two-fold degenerate, and when \(B > \text{Bump}\) the ground state becomes non-degenerate and the corre- \\
+spending wave function is given by \\
+\begin{equation}
+\left[| \text{voltage} \rangle = - \frac{1}{\sqrt{2}}| \text{1} \rangle, \end{equation}
+\end{align*}
+which is obviously of no entanglement. Then, the ground- state negativity forms a plateau when \(B < \text{Bump}\). The jump of negativity at \(B = \text{Bump}\) is due to the level crossing. For instance, for \(N = 4\), there are two level crossings, and the entanglement displays two jumps.
+
+📊 ROUGE (Fine-tuned): {'rouge1': np.float64(0.16285998013902683), 'rouge2': np.float64(0.12338308457711443), 'rougeL': np.float64(0.14498510427010922), 'rougeLsum': np.float64(0.16285998013902683)}
+====================================================================================================
+
+====================================================================================================
+📌 GROUND TRUTH:
+
+# Entanglement properties in (1/2,1) mixed-spin Heisenberg systems
+
+Zhe Sun, XiaoGuang Wang, AnZi Hu, and You-Quan Li
+
+Zhejiang Institute of Modern Physics, Department of Physics, Zhejiang University, HangZhou 310027, China
+
+(October 12, 2023)
+
+###### Abstract
+
+By using the concept of negativity, we investigate entanglement in (1/2,1) mixed-spin Heisenberg systems. We obtain the analytical results of entanglement in small isotropic Heisenberg clusters with only nearest-neighbor (NN) interactions up to four spins and in the four-spin Heisenberg model with both NN and next-nearest-neighbor (NNN) interactions. For more spins, we numerically study effects of temperature, magnetic fields, and NNN interactions on entanglement. We study in detail the threshold value of the temperature, after which the negativity vanishes.
+
+pacs: 75.10.Jm,03.65.Ud
+
+## I Introduction
+
+Entanglement, an essential feature of the quantum mechanics, has been introduced in many fields of physics. In the field of quantum information, the entanglement has played a key role. The study of entanglement properties in many-body systems have attracted much attention M_Nielsen -QPT_GVidal . The Heisenberg chains, widely studied in the condensed matter field, display rich entanglement features and have many useful applications such as in the quantum state transfer M_Sub .
+
+Most of the systems considered in previous studies are spin-half systems as there exists a good measure of entanglement of two spin-halves, the co
+
+----------------------------------------------------------------------------------------------------
+🤖 ZERO-SHOT OUTPUT:
+
+system
+You are a helpful assistant.
+user
+Convert this document image into structured Markdown.
+assistant
+Entanglement properties in (1/2,1) mixed-spin Heisenberg systems Zhe Sun, XiaoGuang Wang, AnZhi Hu, and Yon-QuAN Li Zhejiang Institute of Modern Physics, Department of Physics, Zhejiang University, HangZhou 310027, China (Dated: 2018-01-18) By using the concept of negativity, we investigate entanglement in (1/2,1) mixed-spin Heisenberg systems. We theoretically calculate the entanglement properties in many-body systems with only nearest-neighbour (NN) interactions up to four spins and in the four-spin Heisenberg model from the NN interactions. For more NN interactions, the system will use the effects of temperature, magnetic fields, and NN interactions on entanglement. We study in detail the effects of temperature, after which the negativity vanishes. PACS numbers: 75.10.Jm,03.65.Js I. INTRODUCTION Entanglement, an essential feature of the quantum me- chanism, has been introduced in many fields of physics. In the field of quantum information, the entanglement has played a crucial role in the entanglement properties of many-body systems have attracted much attention [1, 2]. In the study of entanglement in the complex- dened matter field, display rich entanglement features and have many useful applications such as in the quan- tum state transfer [39]. Most of the systems considered in previous studies are spin-half systems as there exists a good measure of entan- glement in 
+
+----------------------------------------------------------------------------------------------------
+🚀 FINE-TUNED OUTPUT:
+
+system
+You are a helpful assistant.
+user
+Convert this document image into structured Markdown.
+assistant
+# Entanglement properties in (1/2,1) mixed-spin Heisenberg systems
+
+Zhe Sun, Xiaoguang Wang, An Hu, and Yun-Qian Lu
+
+Zhejiang Institute of Modern Physics, Department of Physics, Zhejiang University, Hangzhou 310058, China
+
+[Email:](mailto:Zhe.Sun@zju.edu.cn)
+
+[Date:](mailto:2005-08-27)
+
+By using the concept of negativity, we investigate entanglement in (1/2,1) mixed-spin Heisenberg systems. The entanglement properties are studied in many-body systems with only nearest-neighbour (NN) interactions up to four spins and in the four-nearest-neighbour (4NN) interactions. For more complex interactions, the entanglement properties are studied. For more complex interactions, the entanglement properties are studied. In detail, we calculate the entanglement, after which the negativity vanishes. PACS numbers: 75.10.Jm, 03.65.Jm
+
+📊 ROUGE (Fine-tuned): {'rouge1': np.float64(0.21052631578947367), 'rouge2': np.float64(0.145273631840796), 'rougeL': np.float64(0.16683217477656406), 'rougeLsum': np.float64(0.20655412115193644)}
+====================================================================================================
+
+====================================================================================================
+📌 GROUND TRUTH:
+
+e can read the threshold temperature \(T_{\text{th}}\) versus different \(J_{2}\) from the curve in the \(J_{2}-T\) plane. When \(J_{2}\) increases, \(T_{\text{th}}\) decreases, and when \(J_{2}\) crosses about \(0.3758\), \({\cal N}_{1/2,1}\) will disappear at any temperature.
+
+Next, we consider the entanglement between NNN spins. In Fig. 7, we plot the negativity \({\cal N}_{1/2,1/2}\) as a function of the temperature and \(J_{2}\). We can see that, before \(J_{2}\) reaches the value about \(J_{2}=0.5\), \({\cal N}_{1/2,1/2}\) keeps being zero at any temperature. And in the region \(J_{2}>0.5\), the \({\cal N}_{1/2,1/2}\) can be enhanced by the increasing NNN interaction. This is a result from the competition of two kinds of exchange interactions. The thermal fluctuation all along suppresses the entanglement. So, from the curve lying on the \(J_{2}-T\) plane which corresponds to the boundary of the nonzero and zero values of \({\cal N}_{1/2,1/2}\), we may find that the higher the temperature is, the larger the threshold \(J_{\text{2th}}\) will be. From another point of view, the \(T_{\text{th}}\) increases as \(J_{2}\) increases.
+
+
+
+In Fig. 8, we plot the negativity \({\cal N}_{1,1}\) versus \(T\) and \(J_{2}\). In the region of \(J_{2}<0.25\), \({\cal N}_{1,1}\) is zero at any temperature. When \(J_{2}>0.25\), the increasing NNN exchange interaction \(J_{2}\) enhances the negativity and exhibits two particular flat roofs. With the temperature rises, \({\cal N}_{1,1}\) is s
+
+----------------------------------------------------------------------------------------------------
+🤖 ZERO-SHOT OUTPUT:
+
+system
+You are a helpful assistant.
+user
+Convert this document image into structured Markdown.
+assistant
+8 FIG. 6: Negativity N1/2,1/2 versus both the exchange interac- tion coefficient J2 and the temperature in the four-spin sys- tem. temperature T0 versus different J2 from the curve in the J2 = T plane. When J2 increases, T10 decreases, and when J2 crosses about 0.3758, N1/2,1/2 will disappear at any temperature. Next, we consider the entanglement between NNN spins. In Fig. 7, we plot the negativity N1/2,1/2 as a func- tion of the temperature and J2. We can see that, before J2 reaches the value about J2 = 0.5, N1/2,1/2 keeps being zero at any temperature. And in the region J2 > 0.5, the N1/2,1/2 can be enhanced by the increasing NNN interac- tion. This is a result from the competition of two kinds of exchange interactions. The thermal fluctuation all along suppresses the entanglement. So, from the curve lying on the J2 = T plane which corresponds to the boundary of the nonzero and zero values of N1/2,1/2, we may find that the higher the temperature is, the larger the thresh- old J20 will be. From another point of view, the T10 increases as J2 increases. In Fig. 8, we plot the negativity N1 versus T and J2. In the region of J2 < 0.25, the increasing NNN exchange interaction J2 enhances the negativity and exhibits two particular flat roofs. With the temperature rises, N1 is suppressed to zero. Also we can consider the threshold T0 and J02 from the critical curve on the J2 = T
+
+----------------------------------------------------------------------------------------------------
+🚀 FINE-TUNED OUTPUT:
+
+system
+You are a helpful assistant.
+user
+Convert this document image into structured Markdown.
+assistant
+```markdown
+8
+
+```
+
+temperature \(T_{\text{in}}\) versus different \(J_{\text{in}}\) from the curve in the \(J_{\text{in}}\) - \(T\) plane. When \(J_{\text{in}}\) increases, \(T_{\text{in}}\) decreases, and when \(J_{\text{in}}\) crosses about \(0.375\), \(N_{\text{in}}\) will disappear at any temperature. Next, we consider the entanglement between NN spins. In Fig. 7, we plot the negativity \(N_{\text{in}}\) as a func- tion of the temperature and \(J_{\text{in}}\). We can see that, before \(J_{\text{in}}\) reaches the value about \(J_{\text{in}}\) = 0.5, \(N_{\text{in}}\) increases and the region \(N_{\text{in}}\) is enhanced by the increasing NN interaction. This is a result from the competition of two kinds of exchange interactions. The thermal fluctuation all along suppresses the entanglement. So, from the curve lying on the \(J_{\text{in}}\) - \(T\) plane which corresponds to the boundary of the nonzero and zero values of \(N_{\text{in}}\), we may find that the higher the temperature is, the larger the threshold \(J_{\text{in}}\) will be. From another point of view, the \(T_{\text{in}}\) increases as \(J_{\text{in}}\) increases. In Fig. 8, we plot the negativity \(N_{\text{in}}\) versus \(T\) and \(J_{\text{in}}\). In the region of \(J_{\text{in}}\) < 0.25, the increasing NN exchange interaction \(J_{\text{in}}\) enhances the negativity and exhibits two particular fla
+
+📊 ROUGE (Fine-tuned): {'rouge1': np.float64(0.6616216216216216), 'rouge2': np.float64(0.5287107258938245), 'rougeL': np.float64(0.6356756756756756), 'rougeLsum': np.float64(0.6508108108108108)}
+====================================================================================================
