@@ -9,3 +9,4 @@ scipy
 einops
 sentencepiece
 tqdm
+streamlit>=1.32.0

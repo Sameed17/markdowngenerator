@@ -101,11 +101,11 @@ def visualize_sample(sample, title="Sample"):
     plt.show()
 
     print("\n" + "="*80)
-    print("📌 GROUND TRUTH MARKDOWN:\n")
+    print("GROUND TRUTH:\n")
     print(gt_markdown[:2000])
 
     print("\n" + "-"*80)
-    print("🤖 GENERATED MARKDOWN:\n")
+    print("GENERATED:\n")
     print(pred_markdown[:2000])
     print("="*80)
 
