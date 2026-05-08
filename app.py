@@ -94,8 +94,7 @@ def generate_markdown(processor, model, image_path_or_pil):
         ]
         
         text = processor.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-        image_inputs, video_inputs = processor.process_images([image])
-        inputs = processor(text=text, images=image_inputs, videos=video_inputs, return_tensors="pt")
+        inputs = processor(text=text, images=[image], return_tensors="pt")
         
         inputs = {k: v.to(model.device) for k, v in inputs.items()}
         
