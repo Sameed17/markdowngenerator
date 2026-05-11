@@ -38,17 +38,14 @@ def clean_jsonl():
             image_path = data.get("image", "")
             markdown = data.get("markdown", "")
 
-            # 🔴 Check 1: image validity
             if not is_valid_image(image_path):
                 removed += 1
                 continue
 
-            # 🔴 Check 2: empty or tiny markdown
             if not markdown or len(markdown.strip()) < 10:
                 removed += 1
                 continue
 
-            # 🔴 Optional: cut extremely large samples (prevents future crashes)
             if len(markdown) > 10000:
                 data["markdown"] = markdown[:10000]
 
