@@ -45,15 +45,11 @@ model = Qwen2VLForConditionalGeneration.from_pretrained(
     device_map="auto",
 )
 
-# =========================
-# APPLY LORA
-# =========================
 lora_config = LoraConfig(
     r=8,
     lora_alpha=16,
     target_modules=["q_proj", "v_proj"],
     lora_dropout=0.05,
-    bias="none",
     task_type="CAUSAL_LM"
 )
 
@@ -70,17 +66,12 @@ dataset = load_dataset(
 dataset = dataset["train"].train_test_split(test_size=0.2)
 
 def preprocess(example):
-    # Fix image path
-    # image = Image.open(example["image"]).convert("RGB")
-    # Clip markdown (important)
-    prompt = "Convert this document image into structured Markdown."
-
     messages = [
         {
             "role": "user",
             "content": [
                 {"type": "image"},
-                {"type": "text", "text": prompt}
+                {"type": "text", "text": "Convert this document image into structured Markdown."}
             ]
         },
         {"role": "assistant", "content": example["markdown"]}
@@ -97,22 +88,6 @@ def preprocess(example):
         "image_path": example["image"]
     }
 
-    # inputs = processor(
-    #     text=text,
-    #     images=image,
-    #     return_tensors="pt",
-    #     padding="max_length",
-    #     truncation=True,
-    #     max_length=MAX_LENGTH
-    # )
-
-    # inputs["labels"] = inputs["input_ids"].clone()
-    # return {k: v.squeeze(0) for k, v in inputs.items()}
-
-# =========================
-# APPLY PREPROCESSING
-# =========================
-
 train_ds = dataset["train"].select(range(int(FRAC * len(dataset["train"])))).map(
     preprocess,
     remove_columns=dataset["train"].column_names
@@ -122,21 +97,18 @@ val_ds = dataset["test"].select(range(int(FRAC * len(dataset["test"])))).map(
     remove_columns=dataset["test"].column_names
 )
 
-# =========================
-# COLLATE FUNCTION (KEY FIX)
-# =========================
 def collate_fn(batch):
     images = []
     texts = []
     for x in batch:
         image = Image.open(x["image_path"]).convert("RGB")
-        image = image.resize((IMAGE_SIZE, IMAGE_SIZE))  # 🔥 reduce memory
+        image = image.resize((IMAGE_SIZE, IMAGE_SIZE)) 
         images.append(image)
         texts.append(x["text"])
     inputs = processor(
         text=texts,
         images=images,
-        padding=True,  # 🔥 dynamic padding (IMPORTANT)
+        padding=True,
         truncation=True,
         max_length=MAX_LENGTH,
         return_tensors="pt"
@@ -145,9 +117,6 @@ def collate_fn(batch):
     labels[labels == processor.tokenizer.pad_token_id] = -100
     inputs["labels"] = labels
     return inputs
-# =========================
-# TRAINING
-# =========================
 training_args = TrainingArguments(
     output_dir=OUTPUT_DIR,
     per_device_train_batch_size=BATCH_SIZE,
@@ -172,41 +141,4 @@ trainer = Trainer(
 )
 
 trainer.train()
-
-# =========================
-# SAVE MODEL
-# =========================
 model.save_pretrained(OUTPUT_DIR)
-
-# =========================
-# INFERENCE (TEST)
-# =========================
-def generate_markdown(image_path):
-    image = Image.open(image_path).convert("RGB")
-
-    prompt = "Convert this document image into structured Markdown."
-
-    messages = [
-        {"role": "user", "content": prompt}
-    ]
-
-    text = processor.apply_chat_template(
-        messages,
-        tokenize=False,
-        add_generation_prompt=True
-    )
-
-    inputs = processor(
-        text=text,
-        images=image,
-        return_tensors="pt"
-    ).to(model.device)
-
-    with torch.no_grad():
-        output = model.generate(**inputs, max_new_tokens=512)
-
-    result = processor.decode(output[0], skip_special_tokens=True)
-    return result
-
-# Example usage
-# print(generate_markdown("sample.png"))
